@@ -13,7 +13,7 @@ Python 3.x
 ## How to run
 python password_checker.py
 
-Future improvements:
+##Future improvements:
 - Password entropy calculation
 - Hidden password input
 - Dictionary attack detection
