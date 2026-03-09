@@ -6,7 +6,7 @@
 #Variable initialisation
 #------------------------------
 
-special_characters = ["!", "@", "#", "$", "%", "^", "&", "(", ")", "-", "_", "+", "=", "[", "]", "{", "}", ":", ";"]
+special_characters = ["!", "@", "#", "$", "%", "^", "&", "(", ")", "-", "_", "+", "=", "[", "]", "{", "}", ":", ";"] # I am aware that this is hardcoded and incomplete
 password_viability = 0
 
 #------------------------------
@@ -31,6 +31,8 @@ def determine_strength(password_viability):
         return "fair"
     elif password_viability == 4:
         return "strong - don't forget to change it regularly!"
+    else:
+        return "Sorry an error occcurred, please try again"
 #------------------------------
 #Main Program
 #------------------------------
@@ -62,3 +64,12 @@ if not is_length(user_password):
     
 print(f"\nYour password score is: {password_viability}/4")
 print(f"Your password strength score is: {determine_strength(password_viability)}")
+
+
+"""
+TODO:
+
+Weaknesses and vulnerabilities currently include (but are not limited to): hardcoded special character set, doesn't account for dictionary words, passworded is not hidden during input (Shoulder surfing risk), doesn't account for common passwords (e.g. Password123!)
+possible improvements: "getpass" library to avoid shoulder surfing, check against a common password list, "string" library for special characters, perhaps use password entropy
+also: avoid multiple function calls by saving their outputs as strings, build password entropy calculator
+"""
