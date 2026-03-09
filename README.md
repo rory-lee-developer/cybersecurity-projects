@@ -1,4 +1,4 @@
-# Password Strength Checker
+# Password Password Checker
 
 A Python program that evaluates password strength based on:
 
@@ -12,3 +12,5 @@ Future improvements:
 - Hidden password input
 - Dictionary attack detection
 - Call each function only once
+
+#Next: Python port scanner (maybe)
