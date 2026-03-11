@@ -15,6 +15,6 @@ python password_checker.py
 
 ## Future improvements:
 - Password entropy calculation
-- Hidden password input
+- Random strong password generator
 - Dictionary attack detection
 
