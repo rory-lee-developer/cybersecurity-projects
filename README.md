@@ -17,5 +17,4 @@ python password_checker.py
 - Password entropy calculation
 - Hidden password input
 - Dictionary attack detection
-- Code efficiency impovements: Call each function only once
 
