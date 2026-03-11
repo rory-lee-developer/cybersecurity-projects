@@ -3,6 +3,13 @@
 #------------------------------
 
 #------------------------------
+#Libraries
+#------------------------------
+
+import getpass
+import string
+
+#------------------------------
 #Variable initialisation
 #------------------------------
 
@@ -12,6 +19,7 @@ password_viability = 0
 #------------------------------
 #Subprograms
 #------------------------------
+
 def is_upper_and_lower(password):
     return any(char.isupper() for char in password) and any(char.islower() for char in password)
 
@@ -31,8 +39,10 @@ def determine_strength(password_viability):
         return "fair"
     elif password_viability == 4:
         return "strong - don't forget to change it regularly!"
+
 #------------------------------
 #Main Program
+
 #------------------------------
 print("Welcome to the password authenticator program.")
 user_password = input("Please enter your password: ")
