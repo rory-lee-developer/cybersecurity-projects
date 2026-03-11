@@ -42,10 +42,9 @@ def determine_strength(password_viability):
 
 #------------------------------
 #Main Program
-
 #------------------------------
 print("Welcome to the password authenticator program.")
-user_password = input("Please enter your password: ")
+user_password = getpass.getpass("Enter your password: ") # WARNING: must have appropriate output terminal to censor password
 
 is_upper_and_lower_result = is_upper_and_lower(user_password)
 is_number_result = is_number(user_password)
@@ -84,7 +83,7 @@ print(f"Your password strength score is: {determine_strength_result}")
 TODO:
 
 Weaknesses and vulnerabilities currently include (but are not limited to): hardcoded special character set, doesn't account for dictionary words, passworded is not hidden during input (Shoulder surfing risk), doesn't account for common passwords (e.g. Password123!)
-possible improvements: "getpass" library to avoid shoulder surfing, check against a common password list, "string" library for special characters
-also: build password entropy calculator
+possible improvements: check against a common password list, "string" library for special characters
+also: build password entropy calculator, add a random password generator for the user for strong passwords
 
 """
